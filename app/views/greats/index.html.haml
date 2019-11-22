@@ -1,0 +1,108 @@
+.main
+  .main__header
+    .main__header--logo
+      %h1.head
+        - unless user_signed_in? 
+          = link_to new_user_registration_path do
+            = image_tag 'https://www.greatman-words.com/common-images/logo@2x.png', alt: '名言', height: '70', width: '500'
+        
+        - else
+          = link_to new_great_path do
+            = image_tag 'https://www.greatman-words.com/common-images/logo@2x.png', alt: '名言', height: '70', width: '500'
+      
+      
+      - unless user_signed_in? 
+        .main__header--log
+          = link_to 'ログイン', user_session_path, class:"link"
+        .main__header--log2  
+          = link_to '新規登録', new_user_registration_path, class:"link"
+      
+      - else
+        .main__header--log3
+        = link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"link"
+        .main__header--log4
+        = link_to 'マイページ', user_path(current_user.id), class:"link"
+    .main__header--nav#headerNav 
+      %ul.arrowListclearfix
+        %li 
+          = link_to '全て', root_path, class:"links"
+        %li 
+          = link_to '人生', life_greats_path, class:"links"
+        %li
+          = link_to '夢', dream_greats_path, class:"links"
+        %li 
+          = link_to '恋愛', love_greats_path, class:"links"
+        %li 
+          = link_to '仕事', job_greats_path, class:"links"
+        %li
+          = link_to 'スポーツ', sports_greats_path, class:"links"
+        %li
+          = link_to '歴史', history_greats_path, class:"links"
+        %li
+          = link_to 'アニメ', anime_greats_path, class:"links"
+  .main__content{:style => "margin-left: 70px;padding-top: 0px;padding-bottom: 0px;"}
+    .main__content--box
+      .content
+        %h2 偉人たちが残した名言・格言集
+        %ul.entryList
+          - @greats.each do |greats|
+            %li.clearclearfix{:style => "\n    opacity: 30%;\n    border: solid;\n    border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 20px;\n"}
+              %figure.entryFigure
+                = link_to great_path(greats.id) do
+                  = image_tag "#{greats.image}", class: :retina, style: "\n    max-width: 200px;\n    max-height: 200px;\n" 
+                %h3.entryListTitle 
+                  = '・' + greats.content
+                - unless  greats.content2.blank?
+                  %h3.entryListTitle 
+                    = '・' + greats.content2
+                - unless greats.content3.blank?
+                  %h3.entryListTitle 
+                    = '・' + greats.content3
+                  .content-name
+                    = greats.name
+                -else
+                  .content-name
+                    = greats.name
+                = render partial: "likes/like", locals: { great: greats, like: @like } 
+        = paginate(@greats) 
+  .main__side
+  .main__side--content  
+    %h4 名言のカテゴリ
+    %ul.side-line{:style => "\n    margin-left: 900px;\n"}
+      %li
+      = link_to '人生'+ "(#{@lifes})", life_greats_path, class:"link"
+      %li
+      = link_to '夢'+ "(#{@dreams})", dream_greats_path, class:"link"
+      %li
+      = link_to '恋愛'+ "(#{@loves})", love_greats_path, class:"link"
+      %li 
+      = link_to '仕事' + "(#{@jobs})", job_greats_path, class:"link"
+      %li
+      = link_to 'スポーツ'+ "(#{@sports})", sports_greats_path, class:"link"
+      %li
+      = link_to '歴史'+ "(#{@historys})", history_greats_path, class:"link"
+      %li
+      = link_to 'アニメ'+ "(#{@animes})", anime_greats_path, class:"link"
+    = form_tag serach_greats_path, method: :get , class: 'search__form',:style => "\n    margin-left: 900px;\n" do
+      %input{type: "search",name: "keyword", placeholder: '偉人名', class: "search__form__input"}
+        %button{type: "submit", class:'icon-search'}
+          = fa_icon 'search' 
+        -# .search-button
+  .main__side--order
+    %h5{:style => "\n    margin-left: 900px;\n"} いいねランキング
+    %ul.side-latest
+      - @all_ranks.each.with_index(1) do |rank, i|
+        %il.clearfix
+          %h6.entryListTitle{:style => "\n    opacity: 30%;\n    border: solid;\n     \n    font-size: 13px;\n   border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 7px;\n    width: 30%;\n    margin-left: 900px;\n"} 
+            = "第" + i.to_s + "位"
+            = image_tag "#{rank.image}", class: :retina, :style => "\n    max-width: 50px;\n    max-height: 50px;\n    margin-top: 10px;\n"
+            = link_to  great_path(rank.id), class:"link" do
+              %p
+                = rank.content
+
+
+
+
+
+  
+              

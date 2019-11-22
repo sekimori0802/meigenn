@@ -1,0 +1,153 @@
+body{
+  // background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyXk6emGpAK_Qv3MOU95raWhxauKacdaS4FIPihKoo67kvB7FZ");
+  display: flex;
+  justify-content: center;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  margin-left:70px;
+
+  // height:auto !important ;
+  &__header{
+    display: block;
+    &--logo{
+      margin: 0px 150px 24px 11px;
+      h1{
+        color:blue;
+        text-align: center;
+        font-size:45px;
+        font-weight: 800;   
+      }
+    }
+  &--nav{
+      ul{
+    list-style: none;
+    width: 1009px;
+    margin: 0 auto;
+    font-size: 116%;
+    display: block;
+    clear: both;
+    
+     li:first-child {
+      border-left: 1px solid #3F96D0;
+      background: #0074C1;
+      width: 12%;
+    }
+   li {
+    width: 12%;
+    float: left;
+    border-right: 1px solid #3F96D0;
+    background: #0074C1;
+    color: seashell;
+    text-align: center;
+   
+  }
+  li:hover{
+    background: rgb(0, 3, 193);
+
+  }
+  }
+  }
+  }
+  &__content{
+    margin-left: 60px;
+    margin-right: 60px;
+    background: #fff;
+    padding: 10px 12px;
+    width: 985px;
+    margin: 0 auto;
+    clear: both;  
+  &--box{
+    float: left;
+    width: 660px;
+    margin-right: 30px;
+    padding-left: 125px;
+  .content{
+    h2{
+      margin-bottom: 0 !important;
+      padding: 0.2em 0.5em !important;
+      font-size: 162%;
+      font-weight: bold;
+      background: #005798;
+      color: #fff;
+    }
+    p{
+    font-size: 100%;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .entryList{
+    list-style: none;
+    .clearclearfix{
+      margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #efefef;
+    
+    h3{
+      font-size: 147%;
+      margin-bottom: 0.2em;
+      font-weight: bold;
+      color: #1659B4;
+    font-size: 150%;
+    }
+    .content-name{
+      font-size:30px;
+      font-weight: 600;
+    }
+    .btn-default{
+      margin-top: 40px;
+      background: #0074C1;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+      min-height: 1.5em;
+    
+    }
+    .btn-default:hover{
+      background: rgb(0, 3, 193);
+      font-size: 25px;
+    }
+    .btn-defau-gray{
+      margin-top: 40px;
+      background: gray;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+      min-height: 1.5em;
+    }
+    .btn-defau-gray:hover{
+      background:black;
+      font-size: 25px;
+    }
+    }
+    
+    }
+    }
+    }
+  }
+  
+  
+    ul{
+      list-style: none;
+      padding: 0 0 2px;
+     li{
+       font-weight: 600;
+
+    }
+
+    }
+  }
+
+
+  
+

@@ -1,0 +1,100 @@
+- if user_signed_in?
+  - if current_user.likes.find_by(great_id: great.id)
+    = link_to great_like_path(like, great_id: great.id), method: :delete, id: "like-buttons#{great.id}", :style =>  "\n    color: black;\n", remote: true do
+      = fa_icon "heart",:style => "\n    color: crimson;\n"
+      = great.likes_count.present? ? great.likes_count : 0
+  - else 
+    = link_to great_likes_path(great.id),method: :post, id: "like-button#{great.id}", :style =>  "\n    color: black;\n", remote: true do
+      = fa_icon "heart", :style => "\n    color: crimson;\n"
+      = great.likes_count.present? ? great.likes_count : 0
+- else
+  = fa_icon"heart"
+  = great.likes_count
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-# <% if user_signed_in? %>
+
+-#   <% if current_user.likes.find_by(great_id: great.id) %>
+-#     <%= link_to great_like_path(like, great_id: great.id), method: :delete, id: "like-buttons#{great.id}", remote: true do %>
+-#       <%= fa_icon"heart" %>
+-#       <span>
+-#         <%= great.likes_count %>
+-#       </span>
+-#     <% end %>
+-#   <% else %>
+-#     <%= link_to great_likes_path(great.id),method: :post, id: "like-button#{great.id}", remote: true do %>
+-#       <%= fa_icon"heart" %>
+-#       <span>
+-#     <%= great.likes_count %>
+-#       </span> 
+-#   <% end %>
+-#   <% end %>
+
+
+-# <% else %>
+
+-#       <span>
+-#         <%= great.likes_count %>
+-#       </span> 
+
+
+-# <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-# <%# - if user_signed_in?
+-#   - if great.like_user(current_user.id)
+-#     = button_to great_like_path(like, great_id: great.id), method: :delete, id: "like-buttons", remote: true do
+-#       -# = image_tag("icon_red_heart.png")
+-#       %span
+-#         = great.likes_count
+-#   - else
+-#     = button_to great_likes_path(great.id),method: :post, id: "like-button", remote: true do
+-#       -# = image_tag("icon_heart.png")
+-#       %span
+-#         = great.likes_count
+-# - else
+-#   -# = image_tag("icon_heart.png")
+-#   %span
+-#     = great .likes_count %>
