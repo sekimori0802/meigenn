@@ -1,19 +1,22 @@
 # README
 
-概要
+### 概要
+---
 railsの基本機能を搭載した名言の投稿サイトです。
 
 
-アプリケーション情報
-アプリケーション概要
+### アプリケーション概要
+---
 ruby on railsをフレームワークとし、名言の投稿サイトを作成しました。
 接続先情報
 URL http://18.176.77.227
 
-Githubリポジトリ
-       https://github.com/sekimori0802/meigenn
-開発状況
-開発環境
+### Githubリポジトリ
+---
+https://github.com/sekimori0802/meigenn
+### 開発状況
+---
+### 開発環境
 ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 開発チーム
 開発期間と平均作業時間
