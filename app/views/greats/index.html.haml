@@ -46,7 +46,7 @@
         %h2 偉人たちが残した名言・格言集
         %ul.entryList
           - @greats.each do |greats|
-            %li.clearclearfix{:style => "\n    opacity: 30%;\n    border: solid;\n    border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 20px;\n"}
+            %li.clearclearfix{:style => "\n      border: solid;\n    border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 20px;\n"}
               %figure.entryFigure
                 = link_to great_path(greats.id) do
                   = image_tag "#{greats.image}", class: :retina, style: "\n    max-width: 200px;\n    max-height: 200px;\n" 
@@ -93,7 +93,7 @@
     %ul.side-latest
       - @all_ranks.each.with_index(1) do |rank, i|
         %il.clearfix
-          %h6.entryListTitle{:style => "\n    opacity: 30%;\n    border: solid;\n     \n    font-size: 13px;\n   border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 7px;\n    width: 30%;\n    margin-left: 900px;\n"} 
+          %h6.entryListTitle{:style => "\n    \n    border: solid;\n     \n    font-size: 13px;\n   border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 7px;\n    width: 30%;\n    margin-left: 900px;\n"} 
             = "第" + i.to_s + "位"
             = image_tag "#{rank.image}", class: :retina, :style => "\n    max-width: 50px;\n    max-height: 50px;\n    margin-top: 10px;\n"
             = link_to  great_path(rank.id), class:"link" do

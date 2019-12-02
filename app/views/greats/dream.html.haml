@@ -18,9 +18,9 @@
       
       - else
         .main__header--log3
-        = link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"link"
+        = link_to 'ログアウト', destroy_user_session_path, method: :delete , class: 'link'
         .main__header--log4
-        = link_to 'マイページ', user_path(current_user.id), class:"link"
+        = link_to 'マイページ', user_path(current_user.id), class: 'link'
     .main__header--nav#headerNav 
       %ul.arrowListclearfix
         %li 
@@ -45,7 +45,7 @@
         %h2 偉人たちが残した名言・格言集
         %ul.entryList
           - @greats.each do |greats|
-            %li.clearclearfix{:style => "\n    opacity: 30%;\n    border: solid;\n    border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 20px;\n"}
+            %li.clearclearfix{:style => "\n    \n    border: solid;\n    border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 20px;\n"}
               %figure.entryFigure
                 = link_to great_path(greats.id) do
                   = image_tag "#{greats.image}", class: :retina, style: "\n    max-width: 200px;\n    max-height: 200px;\n" 
@@ -69,19 +69,19 @@
     %h4 名言のカテゴリ
     %ul.side-line{:style => "\n    margin-left: 900px;\n"}
       %li
-      = link_to '人生'+ "(#{@lifes})", life_greats_path, class:"link"
+      = link_to '人生'+ "(#{@lifes})", life_greats_path , class: 'link'
       %li
-      = link_to '夢'+ "(#{@dreams})", dream_greats_path, class:"link"
+      = link_to '夢'+ "(#{@dreams})", dream_greats_path , class: 'link'
       %li
-      = link_to '恋愛'+ "(#{@loves})", love_greats_path, class:"link"
+      = link_to '恋愛'+ "(#{@loves})", love_greats_path , class: 'link'
       %li 
-      = link_to '仕事' + "(#{@jobs})", job_greats_path, class:"link"
+      = link_to '仕事' + "(#{@jobs})", job_greats_path , class: 'link'
       %li
-      = link_to 'スポーツ'+ "(#{@sports})", sports_greats_path, class:"link"
+      = link_to 'スポーツ'+ "(#{@sports})", sports_greats_path , class: 'link'
       %li
-      = link_to '歴史'+ "(#{@historys})", history_greats_path, class:"link"
+      = link_to '歴史'+ "(#{@historys})", history_greats_path , class: 'link'
       %li
-      = link_to 'アニメ'+ "(#{@animes})", anime_greats_path, class:"link"
+      = link_to 'アニメ'+ "(#{@animes})", anime_greats_path , class: 'link'
     = form_tag serach_greats_path, method: :get , class: 'search__form',:style => "\n    margin-left: 900px;\n" do
       %input{type: "search",name: "keyword", placeholder: '偉人名', class: "search__form__input"}
         %button{type: "submit", class:'icon-search'}
@@ -92,7 +92,7 @@
     %ul.side-latest
       - @all_ranks.each.with_index(1) do |rank, i|
         %il.clearfix
-          %h6.entryListTitle{:style => "\n    opacity: 30%;\n    border: solid;\n     \n    font-size: 13px;\n   border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 7px;\n    width: 30%;\n    margin-left: 900px;\n"} 
+          %h6.entryListTitle{:style => "\n    \n    border: solid;\n     \n    font-size: 13px;\n   border-color: #aac7de;\n    background: cornsilk;\n    border-radius: 7px;\n    width: 30%;\n    margin-left: 900px;\n"} 
             = "第" + i.to_s + "位"
             = image_tag "#{rank.image}", class: :retina, :style => "\n    max-width: 50px;\n    max-height: 50px;\n    margin-top: 10px;\n"
             = link_to  great_path(rank.id), class:"link" do
