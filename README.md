@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+概要
+railsの基本機能を搭載した名言の投稿サイトです。
 
-Things you may want to cover:
 
-* Ruby version
+アプリケーション情報
+アプリケーション概要
+ruby on railsをフレームワークとし、名言の投稿サイトを作成しました。
+接続先情報
+URL http://18.176.77.227
 
-* System dependencies
+Githubリポジトリ
+       https://github.com/sekimori0802/meigenn
+開発状況
+開発環境
+ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
+開発チーム
+開発期間と平均作業時間
+開発期間：約1週間
+1日あたりの平均作業時間：約6時間
+開発体制
+人数：1人
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+動作確認方法
+Chromeの最新版を利用してアクセスしてください。
+ただしデプロイ等で接続できないタイミングもございます。その際は少し時間をおいてから接続ください。
+接続先およびログイン情報については、上記の通りです。
+同時に複数の方がログインしている場合に、ログインできない可能性がございます。
+確認後、ログアウト処理をお願いします。
