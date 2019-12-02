@@ -70,4 +70,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'devise'
-
+gem 'fog-aws'
