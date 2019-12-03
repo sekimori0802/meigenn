@@ -1,14 +1,16 @@
 # README
 
-### 概要
+### 作成の背景
 ---
-railsの基本機能を搭載した名言の投稿サイトです。
+tech-expertで主に学んできたruby on railsをフレームワークとしたアプリ作成の復習を行うため。
 
 
 ### アプリケーション概要
 ---
 ruby on railsをフレームワークとし、名言の投稿サイトを作成しました。
-接続先情報
+railsの基本機能である投稿、詳細、編集、消去、検索機能は全て搭載しています。
+またgemのdeviseを使用しマイページ機能も作成しました。
+フロントサイドは、主にhamlとscssを使用し作成しました。
 
 ### Githubリポジトリ
 ---
@@ -17,7 +19,7 @@ https://github.com/sekimori0802/meigenn
 ---
 ### 開発環境
 ---
-ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
+ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/jQuery/haml/scss
 - 開発期間と平均作業時間
 - 開発期間：約1週間
 - 1日あたりの平均作業時間：約6時間
@@ -46,5 +48,12 @@ ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
 投稿者とその他ユーザー、ログインしていないユーザーで表示するボタンを変更
 ![e88f462c9438316fa60dce7dd2f647bd](https://user-images.githubusercontent.com/54921622/69952731-28346e80-153b-11ea-8ed4-df5cc0fa4c96.gif)
 - いいね数のランキング機能
+いいねの数でランキングを表示。いいねを使えるのはサイトに登録を行ったユーザーのみにしています。
+![7b917d99ad8192354392d46605d04cd9](https://user-images.githubusercontent.com/54921622/70014359-e567aa80-15bd-11ea-8a10-54915c399487.gif)
+### 苦労した点
+---
+- 自身のマイページだけでは無く他者のページに訪問出来る機能をつけた点。
+- いいね機能の非同期化。またランキング機能をつけた点。
+- タグ検索の実装をした点。
 
 
