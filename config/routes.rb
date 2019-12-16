@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "greats#index"
   
   resources :greats, only:[:index,:new,:create,:show,:edit,:update,:destroy] do
-    collection do
+    collection 
       scope '/greats' do
         get '/job', to: 'greats#job', as: 'job'
      end
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
      end
       scope '/greats' do
         get '/sports', to: 'greats#sports', as: 'sports'
-    end
+    
       scope '/greats' do
         get '/history', to: 'greats#history', as: 'history'
     end
